@@ -18,10 +18,10 @@ Event event2 = new Event(time4, time3, "YORK2622");
 Event event3 = new Event(time1, time2, "PCYNH109");
 Event event4 = new Event(time7, time4, "EBU3B3206");
 ~~~
-`event1`
+- [] event1
 
-`event2`
+- [] event2
 
-`event3`
+- [] event3
 
-`event4`
+- [] event4
