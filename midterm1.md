@@ -1,3 +1,5 @@
+<h1 align="center"> Quiz 1 </h1>
+
 ## Q1 Events
 1 Point
 
@@ -189,7 +191,8 @@ playlist1.addSong(song2);
 
 - [ ] 7
 
-## Q3.21 Point
+### Q3.2
+1 Point
 
 How many total Song and Playlist objects are created?
 ~~~
