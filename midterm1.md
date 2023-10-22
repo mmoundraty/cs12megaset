@@ -66,10 +66,10 @@ class B implements Iface {
 
 Select all of the declarations below that would NOT cause a compile error:
 - [ ] Iface i1 = new A();
-- [ ] Choice 2 of 5:B b = new Iface();
-- [ ] Choice 3 of 5:A a1 = new B();
-- [ ] Choice 4 of 5:Iface i2 = new Iface();
-- [ ] Choice 5 of 5:A a2 = new A();
+- [ ] B b = new Iface();
+- [ ] A a1 = new B();
+- [ ] Iface i2 = new Iface();
+- [ ] A a2 = new A();
 
 ### Q2.2 
 1 Point
