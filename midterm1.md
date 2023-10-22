@@ -80,3 +80,134 @@ Select all of the declarations below that would NOT cause a compile error:
 - [ ] Iface i2 = new B(); String val2 = i2.x;
 - [ ] A a1 = new A(); String val3 = a1.s;
 - [ ] A a2 = new A(); String val4 = a2.y;
+
+### Q2.3
+1 Point
+
+What would be printed when the main method is executed?
+~~~
+class Q3 {
+  A a1 = new A();
+  boolean val1 = a1.m();
+
+  Iface i1 = new B();
+  int val2 = i1.n();
+
+  Iface i2 = a1;
+  int val3 = i2.n();
+
+  public static void main(String[] args){
+    Q3 q = new Q3();
+    System.out.println(q.val1 + ", " + q.val2 + ", " + q.val3);
+  }
+}
+~~~
+- [ ] false, 2, 12
+
+- [ ] false, 12, 2
+
+- [ ] false, 12, 12
+
+- [ ] true, 2, 2
+
+- [ ] true, 2, 12
+
+- [ ] true, 12, 2
+
+## Q3 Tracing
+2 Points
+
+For Questions 3.1 and 3.2 reference the following code:
+~~~
+class Song {
+  String title;
+  String artist;
+  int year;
+
+  public Song(String title, String artist, int year) {
+    this.title = title;
+    this.artist = artist;
+    this.year = year;
+  }
+}
+
+class Playlist {
+  String title;
+  Song[] songs;
+  int numSongs;
+
+  public Playlist(int length, String title) {
+    this.title = title;
+    this.songs = new Song[length];
+    this.numSongs = 0;
+    for (int i = 0; i < songs.length; i++) {
+      this.songs[i] = new Song("", "", 0);
+    }
+  }
+
+  public Playlist(String title, int length) {
+    this.title = title;
+    this.songs = new Song[length];
+    this.numSongs = 0;
+  }
+
+  public boolean setSong(int index, Song song) {
+    if (index >= this.songs.length || index < 0) return false;
+    this.songs[index] = song;
+    return true;
+  }
+
+  // returns false if playlist already full, else true
+  public boolean addSong(Song newSong) {
+    if (this.songs.length == this.numSongs) return false;
+    this.songs[this.numSongs] = newSong;
+    this.numSongs++;
+    return true;
+  }
+}
+~~~
+
+### Q3.1
+1 Point
+
+How many total Song and Playlist objects are created?
+~~~
+Playlist playlist1 = new Playlist("90s Pop", 3);
+Song song1 = new Song("Say My Name", "Destiny's Child", 1999);
+Song song2 = new Song("I Want It That Way", "Backstreet Boys", 1999);
+playlist1.addSong(song1);
+playlist1.addSong(song2);
+~~~
+
+- [ ] 3
+
+- [ ] 4
+
+- [ ] 5
+
+- [ ] 6
+
+- [ ] 7
+
+## Q3.21 Point
+
+How many total Song and Playlist objects are created?
+~~~
+Playlist playlist2 = new Playlist(4, "More 90s Pop");
+Song song3 = new Song("Wannabe", "Spice Girls", 1996);
+Song song4 = new Song("...Baby One More Time", "Britney Spears", 1998);
+playlist2.setSong(2, song3);
+playlist2.setSong(0, song4);
+~~~
+- [ ] 3
+
+- [ ] 4
+
+- [ ] 5
+
+- [ ] 6
+
+- [ ] 7
+
+- [ ] 8
+
